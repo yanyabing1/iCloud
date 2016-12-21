@@ -1,0 +1,390 @@
+body,
+html {
+  height: 100%;
+}
+.container {
+  height: 100%;
+  min-width: 970px;
+  background: #cccccc;
+}
+.container .left {
+  min-width: 280px;
+  width: 28.86%;
+  float: left;
+  height: 100%;
+  background: #383836;
+}
+.container .left .logo-box {
+  width: 100%;
+  height: 44px;
+  background: #383836;
+  border-bottom: 1px solid #111;
+}
+.container .left .logo {
+  float: left;
+  width: 56px;
+  height: 16px;
+  margin: 14px;
+  background: url('../images/1.png') no-repeat 0 -588px;
+}
+.container .left .add {
+  float: right;
+  width: 22px;
+  height: 22px;
+  margin: 11px 14px;
+  background: url('../images/1.png') no-repeat -69px -526px;
+}
+.container .left .add:hover {
+  background: url('../images/1.png') no-repeat -92px -526px;
+}
+.container .left .title-list {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #fff;
+}
+.container .left .title-list li {
+  height: 44px;
+  cursor: pointer;
+}
+.container .left .title-list .color {
+  width: 16px;
+  height: 16px;
+  margin: 14px;
+  float: left;
+  border-radius: 50%;
+}
+.container .left .title-list p {
+  float: left;
+  width: 100%;
+  margin-top: -44px;
+  margin-left: 44px;
+  height: 43px;
+  line-height: 43px;
+  border-bottom: 1px solid #2a2a28;
+  box-shadow: 0 1px  0 0 #3e3e3c inset;
+}
+.container .right {
+  overflow: hidden;
+  width: 71.14%;
+  height: 100%;
+  background: url('../images/2.png') repeat 0 0;
+}
+.container .r-top {
+  height: 44px;
+  border-bottom: 1px solid #cecece;
+}
+.container .r-top .search-box {
+  height: 44px;
+  float: left;
+  position: relative;
+}
+.container .r-top .search-icon {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  background: url('../images/1.png') no-repeat -139px -359px;
+  position: absolute;
+}
+.container .r-top input {
+  width: 316px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  padding-left: 44px;
+  height: 44px;
+  background: transparent;
+  font-size: 16px;
+}
+.container .r-top input:focus {
+  background: #fff;
+  border-right: 1px solid #cecece;
+}
+.container .r-list {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.container .r-list .r-list-title {
+  height: 62px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.container .r-list .r-list-title h2 {
+  font-size: 40px;
+  float: left;
+  line-height: 62px;
+  font-family: Arial;
+}
+.container .r-list .r-list-title .setting {
+  padding-top: 35px;
+  float: right;
+  font-size: 19px;
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.container .r-list .r-list-title .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9999;
+}
+.container .r-list .r-list-title .set-box {
+  width: 363px;
+  height: 234px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 13px;
+  right: 75px;
+  box-shadow: 0 0 10px #ccc;
+  border: 1px solid #ccc;
+  z-index: 2342342432432423342432423432432;
+}
+.container .r-list .r-list-title .set-box .sanjiao {
+  width: 20px;
+  height: 20px;
+  background: url("../images/sanjiaoxing.png");
+  background-size: 20px 20px;
+  position: absolute;
+  top: 100px;
+  right: -18px;
+}
+.container .r-list .r-list-title .set-box .set-boxin {
+  width: 351px;
+  height: 222px;
+  margin: 5px auto;
+  border: 1px solid #E5E5E6;
+  border-radius: 8px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .input {
+  width: 314px;
+  height: 42px;
+  border: 1px solid #D9D9D9;
+  margin: 18px auto;
+  position: relative;
+  border-radius: 3px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .input input {
+  width: 312px;
+  height: 40px;
+  border: 1px solid #fafafa;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+}
+.container .r-list .r-list-title .set-box .set-boxin p {
+  margin-left: 18px;
+  color: #1a1a1a;
+  font-size: 15px;
+}
+.container .r-list .r-list-title .set-box .set-boxin ul {
+  height: 52px;
+  width: 100%;
+  padding: 17px 0 0 17px;
+}
+.container .r-list .r-list-title .set-box .set-boxin ul li {
+  width: 23px;
+  height: 23px;
+  background: red;
+  border: 1px solid transparent;
+  padding: 3px;
+  border-radius: 50%;
+  background-clip: content-box;
+  float: left;
+  margin-right: 10px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group {
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 24234324324234233432432;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group a {
+  font-size: 17px;
+  line-height: 56px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group .del {
+  color: #ff3b30;
+  float: left;
+  margin-left: 17px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group .cancel {
+  color: #007aff;
+  float: right;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group .complete {
+  color: #007aff;
+  font-weight: 600;
+  float: right;
+  margin-right: 30px;
+}
+.container .r-list .r-list-title .set-box .set-boxin .btn-group .line {
+  width: 1px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
+  float: right;
+  margin: 15px 30px;
+}
+.container .list-box .list-box-top {
+  height: 51px;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 51px;
+}
+.container .list-box .list-box-top .title-icon-hot {
+  width: 23px;
+  height: 23px;
+  background: url('../images/1.png') no-repeat -100px -500px;
+  float: left;
+  cursor: pointer;
+  margin-top: 17px;
+}
+.container .list-box .list-box-top .title-icon {
+  width: 23px;
+  height: 23px;
+  background: url('../images/1.png') no-repeat -23px -526px;
+  float: left;
+  cursor: pointer;
+  margin-top: 17px;
+}
+.container .list-box .list-box-top .com-num {
+  margin-left: 22px;
+  float: left;
+  font-size: 19px ;
+  color: #999;
+}
+.container .list-box .list-box-top .clear {
+  float: right;
+  font-size: 20px;
+  margin-right: 30px;
+}
+.container .list-box .date {
+  height: 43px;
+  line-height: 55px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.container .list-box .date span {
+  font-size: 15px;
+  color: #999;
+  font-weight: 600;
+}
+.container .list-box .list-com {
+  height: auto;
+  margin-bottom: 25px;
+}
+.container .list-box .list-com li {
+  height: 51px;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 51px;
+  color: #333;
+  font-size: 19px;
+}
+.container .list-box .list-com li .bg {
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  margin-left: -30px;
+}
+.container .list-box .list-com li .bgborder {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  position: absolute;
+  z-index: 222;
+  margin-left: -30px;
+}
+.container .list-box .list-com li .item-icon {
+  width: 23px;
+  height: 23px;
+  background: red;
+  border: 1px solid red;
+  padding: 3px;
+  border-radius: 50%;
+  background-clip: content-box;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2222;
+  cursor: pointer;
+}
+.container .list-box .list-com li p {
+  height: 50px;
+  position: relative;
+  z-index: 22333;
+  display: block;
+}
+.container .list-box .list-com li input {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  outline: 0;
+  width: 90%;
+  height: 50px;
+  margin-left: 40px;
+  font-size: 19px;
+  color: #999;
+  position: relative;
+  z-index: 8888;
+}
+.container .list-box .list-now {
+  height: auto;
+}
+.container .list-box .list-now li {
+  height: 51px;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 51px;
+  color: #333;
+  font-size: 19px;
+}
+.container .list-box .list-now li .bg {
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  margin-left: -30px;
+}
+.container .list-box .list-now li .bgborder {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  position: absolute;
+  z-index: 222;
+  margin-left: -30px;
+}
+.container .list-box .list-now li .item-icon {
+  float: left;
+  width: 27px;
+  height: 27px;
+  border: 1px solid red;
+  border-radius: 50%;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2222;
+  cursor: pointer;
+}
+.container .list-box .list-now li input {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  outline: 0;
+  width: 90%;
+  height: 50px;
+  margin-left: 40px;
+  font-size: 19px;
+  color: #999;
+  position: relative;
+  z-index: 8888;
+}
+.container .list-box .now {
+  height: 49px;
+  color: #999;
+  font-size: 19px;
+  line-height: 49px;
+  border-bottom: 1px solid #E0E0E0;
+  margin-left: 50px;
+  cursor: pointer;
+  user-select: none;
+}

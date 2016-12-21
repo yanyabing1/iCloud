@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        /*
+        getdata()
+        savedata()
+        deldata()
+         */
+        var app=angular.module('app',[]);
+        var colors=['rgba(201,112,227,1)','rgba(109,219,49,1)','rgba(65,172,249,1)','rgba(243,203,0,1)','rgba(159,133,93,1)','rgb(247,36,105,1)','rgba(249,150,0,1)'];
+        app.factory('localS',function () {
+            return {
+                getdata: function () {
+                    var data = localStorage.getItem('todo');
+                    if (data == null) {
+                        return [
+                            {
+                                id: 1,
+                                title: '列表1',
+                                color: colors[0],
+                                list: []
+                            }
+                        ]
+                    }
+                    return JSON.parse(data);
+                },
+                savedata: function () {
+                    return localStorage.getItem('todo', JSON.stringify('data'))
+                }
+            }
+        }
+        app.controller('a',function ($scope,localS) {
+            $scope.name=localS.n
+        })
+    </script>
+</head>
+<body>
+    <div ng-controller="a">
+        {{name}}
+    </div>
+</body>
+</html>

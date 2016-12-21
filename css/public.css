@@ -1,0 +1,22 @@
+body,ul,li,ol,dl,dt,dd,input,h1,h2,h3,h4,h5,h6,figure,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img{
+    border:0;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+*{
+    font-family: 'SFNSText', 'Helvetica Neue', 'Microsoft Yahei', 'SimHei';
+}
+.cl{
+    display: block;
+    clear: both;
+}
+.show{
+    display: block;
+}

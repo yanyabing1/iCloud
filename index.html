@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="ctrl">
+<head>
+    <meta charset="UTF-8" />
+    <title>iCloud提醒事项</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sevice.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container" ng-controller="c">
+        <div class="left">
+            <div class="logo-box">
+                <span class="logo"></span>
+                <a href="javascript:;" class="add" ng-click="add()"></a>
+            </div>
+            <ul class="title-list">
+                <li ng-repeat="v in todo track by $index" ng-style="{background:index==$index?'#2d2d2b':''}" ng-click="select($index)">
+                    <div class="color" style="background-color:{{v.color}}"></div>
+                    <p>{{v.title}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="r-top">
+                <div class="search-box">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="搜索所有提醒">
+                </div>
+            </div>
+            <div class="r-list">
+                <div class="r-list-title">
+                    <h2 ng-style="{color:todo[index].color}">{{todo[index].title}}</h2>
+                    <div class="mask" ng-show="setShow" ng-click="change()"></div>
+                    <div class="setting" ng-style="{color:todo[index].color}" ng-click="change()">选项</div>
+                    <div class="set-box" ng-show="setShow">
+                        <div class="sanjiao"></div>
+                        <div class="set-boxin">
+                            <div class="input">
+                                <input ng-model="Ttitle"  ng-style="{color:cColor}">
+                            </div>
+                            <p>列表颜色</p>
+                            <ul>
+                                <li ng-repeat="v in colors" ng-style="{backgroundColor:v,borderColor:v==cColor?v:''}" ng-click="changeColor(v)"></li>
+                            </ul>
+                            <div class="btn-group">
+                                <a href="javascript:;" class="del" ng-click="del()">删除</a>
+                                <a href="javascript:;" class="complete" ng-click="done()">完成</a>
+                                <span class="line"></span>
+                                <a href="javascript:;" class="cancel" ng-click="cancel()">取消</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="list-box-top">
+                        <div ng-class="{false:'title-icon',true:'title-icon-hot'}[!comfalg]" ng-click="click()"></div>
+                        <div class="com-num"> 已完成：{{num}}项 </div>
+                        <a href="##" class="clear" ng-style="{color:todo[index].color}" ng-show="comfalg" ng-click="qingchu()">清除已完成事项</a>
+                    </div>
+                    <ul class="list-com" ng-show="comfalg">
+                        <li ng-repeat="v in todo [index].list|filter:{'done':true}" ng-click="changebg(v,$index)">
+                            <div class="bg" ng-style="{opacity:i==$index&&f?0.4:0,backgroundColor:todo[index].color}"></div>
+                            <div class="bgborder" ng-style="{opacity:i==$index&&f?1:0,borderColor:todo[index].color}" ></div>
+                            <div class="item-icon" ng-click="changestate(v,false)" ng-style="{backgroundColor:todo[index].color,borderColor:todo[index].color}">
+                                <div class="item-iconin"></div>
+                            </div>
+                            <input type="text" ng-model="v.title">
+                        </li>
+                    </ul>
+                    <ul class="list-now">
+                        <li ng-repeat="v in todo [index].list|filter:{'done':false}" ng-click="changebg(v,$index)" ng-blur="saveData()">
+                            <div class="bg" ng-style="{opacity:i==$index&&!f?0.4:0,backgroundColor:todo[index].color}">
+                            </div>
+                            <div class="bgborder" ng-style="{opacity:i==$index&&!f?1:0,borderColor:todo[index].color}" ></div>
+                            <div class="item-icon" ng-click="changestate(v,true)" ng-style="{borderColor:todo[index].color}"></div>
+                            <!--<p contenteditable="true" ng-blur="changetext(v,$event)" >{{v.title}}</p>-->
+                            <input type="text" ng-model="v.title">
+                        </li>
+                    </ul>
+                    <div class="now" ng-click="newpro()">新项目...</div>
+                </div>
+            </div>
+            <div class="search-list" >
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .color{
+            background:#F99600;
+        }
+    </style>
+<div class="color" ></div>
+</body>
+<script>
+    var logoBox=document.querySelector(".logo-box");
+    var titleList=document.querySelector(".title-list");
+    titleList.style.height=document.documentElement.clientHeight-45+'px';
+    var rList=document.querySelector(".r-list");
+    rList.style.height=document.documentElement.clientHeight-logoBox.offsetHeight+'px';
+    var mask=document.querySelector(".mask");
+    mask.style.height=document.documentElement.clientHeight+"px";
+    mask.style.width=document.documentElement.clientWidth+"px";
+</script>
+</html>
